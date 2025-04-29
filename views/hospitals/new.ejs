@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h2>Add Hospital</h2>
+    <form class="needs-validation" novalidate action="/hospitals" method="POST">
+        <div class="mb-3">
+            <label>Hospital Name</label>
+            <input type="text" name="hospital[hospitalName]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Location</label>
+            <input type="text" name="hospital[location]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Number of Doctors</label>
+            <input type="number" name="hospital[numberOfDoctors]" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Number of Beds</label>
+            <input type="number" name="hospital[numberOfBed]" class="form-control" required>
+        </div>
+        <button class="btn btn-success">Create Hospital</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

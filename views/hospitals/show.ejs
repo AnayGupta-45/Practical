@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h2><%= hospital.hospitalName %></h2>
+    <ul class="list-group mt-3">
+        <li class="list-group-item">Location: <%= hospital.location %></li>
+        <li class="list-group-item">Doctors: <%= hospital.numberOfDoctors %></li>
+        <li class="list-group-item">Beds: <%= hospital.numberOfBed %></li>
+    </ul>
+
+    <a href="/hospitals/<%= hospital._id %>/edit" class="btn btn-warning mt-3">Edit</a>
+    <form action="/hospitals/<%= hospital._id %>/delete" method="POST" class="d-inline">
+        <button class="btn btn-danger mt-3">Delete</button>
+    </form>
+    <a href="/hospitals" class="btn btn-secondary mt-3">Back</a>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h2>All Hospitals</h2>
+    <a href="/hospitals/new" class="btn btn-primary mb-3">Add New Hospital</a>
+    <div class="list-group">
+        <% hospitals.forEach(hospital => { %>
+            <a href="/hospitals/<%= hospital._id %>" class="list-group-item list-group-item-action">
+                <%= hospital.hospitalName %> - <%= hospital.location %>
+            </a>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

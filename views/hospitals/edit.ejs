@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-5">
+    <h2>Edit Hospital</h2>
+    <form class="needs-validation" novalidate action="/hospitals/<%= hospital._id %>" method="POST">
+        <div class="mb-3">
+            <label>Hospital Name (cannot be changed)</label>
+            <input type="text" class="form-control" value="<%= hospital.hospitalName %>" disabled>
+        </div>
+        <div class="mb-3">
+            <label>Location</label>
+            <input type="text" name="hospital[location]" value="<%= hospital.location %>" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Number of Doctors</label>
+            <input type="number" name="hospital[numberOfDoctors]" value="<%= hospital.numberOfDoctors %>" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Number of Beds</label>
+            <input type="number" name="hospital[numberOfBed]" value="<%= hospital.numberOfBed %>" class="form-control" required>
+        </div>
+        <button class="btn btn-warning">Update Hospital</button>
+    </form>
+</div>
+
+<%- include('../partials/footer') %>

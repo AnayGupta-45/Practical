@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+    <h1>Welcome to Hospital Management System</h1>
+    <% if (!currentUser) { %>
+        <a href="/register" class="btn btn-primary mt-3">Register</a>
+        <a href="/login" class="btn btn-success mt-3">Login</a>
+    <% } else { %>
+        <a href="/hospitals" class="btn btn-info mt-3">View Hospitals</a>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>
